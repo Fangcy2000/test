@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+
+    <script>
+       
+        function BMI()
+         {
+             var t = document.getElementById("Text2").value;
+             var w = document.getElementById("Text3").value;
+
+             if(isNaN(t))
+             {
+                 alert("身高只能是數字!");
+                 Text2.value=""; 
+             }
+             else if(isNaN(w))
+             {
+                 alert("體重只能是數字!");
+                 Text3.value="";
+             } 
+             else
+             { 
+                 t = parseFloat(t) / 100;
+                 w = parseFloat(w)
+                 var bmi = w / (t*t);
+                 bmi = bmi.toFixed(2);
+                 var mylevel;
+                if (bmi < 18.5) {
+                    mylevel = "體重過輕";
+                } else if (bmi>=18.5 && bmi<24) {
+                    mylevel = "正常範圍";
+                } else if (bmi>=24 && bmi<27) {
+                    mylevel = "過重";
+                } else if (bmi>=27 && bmi<30) {
+                    mylevel = "輕度肥胖";
+                } else if (bmi >= 30 && bmi < 35) {
+                    mylevel = "中度肥胖";
+                } else {
+                    mylevel="重度肥胖";
+                }
+                 alert(" 身高 " + t +"公尺!"+" 體重 "+ w +"公斤!"+"\n BMI = "+bmi+ mylevel);
+             }
+
+         }
+         function table()
+         {
+                 var check={};
+
+
+         }
+        
+      </script>
+
+</head>
+<body>
+        <div style="border:3px rgba(45, 73, 134, 0.562) dashed;">
+   <h1>Patient Questionnaire</h1>
+    <form action="http://203.64.84.113/x/RQ_RS.aspx" method="post">
+        Name:<br>
+        <input id="Text1" type="text" name="Name" value="">  <br><br>
+        Hobby:<br>
+        <input type="radio" name="hobby" value="swim" > Swim
+        <input type="radio" name="hobby1" value="jummp"> Jummp
+        <input type="radio" name="hobby2" value="dance"> Dance <br><br>
+        Height:<br>
+        <input id="Text2" type="text" name="Height" value="">公分  <br><br>
+        Weight:<br>
+        <input id="Text3" type="text" name="Weight" value="">公斤  <br><br>
+        Date of Birth:<br>
+        <select id="selectID"></select>
+           
+            <select id="selectID0" name="Day">
+                    <option value="1">1
+                <option value="2">2
+                <option value="3">                         
+                <option value="4">4
+                <option value="5">5
+                <option value="6">6
+                <option value="7">7
+                <option value="8">8
+                <option value="9">9
+                <option value="10">10
+                <option value="11">11
+                <option value="12">12
+                <option value="13">13
+                <option value="14">14
+                <option value="15">15
+                <option value="16">16
+                <option value="17">17
+                <option value="18">18
+                <option value="19">19
+                <option value="20">20
+                <option value="21">21
+                <option value="22">22
+                <option value="23">23
+                <option value="24">24
+                <option value="25">25
+                <option value="26">26
+                <option value="27">27
+                <option value="28">28
+                <option value="29">29
+                <option value="30">30
+                <option value="31">31
+            </select><br><br>
+       
+        <a href="https://hillsboroent.com/forms/">參考表單</a>
+        <br> <input type="button" onclick="BMI()" value="計算BMI">
+             <input type="button" onclick="table()" value="button">
+    </form>
+</div>
+</body>
+<script>
+        var month=[
+        {title:"1", value="1"},
+        {title:"2", value="2"},
+        {title:"3", value="3"},
+        {title:"4", value="4"},
+        {title:"5", value="5"},
+        {title:"6", value="6"},
+        {title:"7", value="7"},
+        {title:"8", value="8"},
+        {title:"9", value="9"},
+        {title:"10", value="10"},
+        {title:"11", value="11"},
+        {title:"12",value:"12"}
+        ];
+    </script>
+</html>
